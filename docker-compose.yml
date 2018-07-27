@@ -1,0 +1,34 @@
+version: '3'
+
+networks:
+  chatbot-network:
+
+services:
+  chatbot:
+    container_name: chatbot
+    build: .
+    restart: always
+    links:
+      - redis     
+    depends_on: 
+      - redis
+    networks:
+      - chatbot-network 
+  redis:
+    container_name: redis
+    hostname: redis
+    image: redis
+    restart: always
+    ports:
+      - 6379:6379
+    volumes:
+      - "./data/redis:/data"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 1s
+      timeout: 3s
+      retries: 30   
+    networks:
+      - chatbot-network
+
+     

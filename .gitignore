@@ -1,0 +1,58 @@
+# .gitignore
+
+# Duplicate Scripts
+./scripts
+
+# Protobuf
+*.proto
+
+# Database
+data/
+database/
+
+# Tests
+tests/results
+tests/results/*
+
+# Config
+.env
+config.json
+config.js
+config/
+
+# Logs
+logs/
+.logs/
+*.log
+*.logs
+npm-debug.log*
+.hubot_history
+
+# Temporary Files
+*.swp
+
+# Build Files
+build/
+dist/
+
+# Dependencies
+node_modules/
+
+# Cache
+.npm
+
+# Python
+.pyc
+*.pyc
+.project
+.pydevproject
+__pycache__
+
+# Operating System
+.DS_Store
+
+# Editor
+.vscode
+
+# Tests / Code Coverage
+coverage/

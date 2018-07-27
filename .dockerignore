@@ -1,0 +1,9 @@
+.git/
+.gitignore
+.hubot_history
+package-lock.json
+documentation/
+node_modules/
+tests/
+data/
+coverage/
