@@ -20,6 +20,7 @@ module.exports = (robot) => {
 
 		setTimeout(() => {
 			if (!foundResult) {
+				foundResult = true
 				res.send("Sorry I couldn't find any information... Please rephrase your question.")
 			}
 		}, 10000)
@@ -36,6 +37,7 @@ module.exports = (robot) => {
 				}
 
 				if (!foundResult) {
+					foundResult = true
 					res.send("Sorry I couldn't find any information... Please rephrase your question.")
 				}				
 			})

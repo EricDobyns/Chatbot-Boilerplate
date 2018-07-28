@@ -4,8 +4,6 @@
 //      Note - Replace all occurrances of "insert_name" with the desired user to insult
 //
 
-import "babel-polyfill"
-
 module.exports = function(robot) {
 
 	// Deliver smartass message if spoken to by a specific user
@@ -26,7 +24,6 @@ module.exports = function(robot) {
 
 		next(done)
 	})
-
 
 	// Deliver a random insult
 	robot.respond(new RegExp("insult me", "i"), function(msg) {

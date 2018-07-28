@@ -5,7 +5,7 @@
 
 module.exports = (robot) => {
 
-	// 
+	// Robot Help
 	robot.respond(new RegExp("help|-h|--help", "i"), (res) => {
 		let robotName = robot.name.toLowerCase()
 		res.send(`
@@ -22,7 +22,10 @@ module.exports = (robot) => {
         *Look up a phrase (Wolfram Alpha):*
             ${robotName} lookup <phrase>
             ${robotName} look up <phrase>
-            ${robotName} query <phrase>
+			${robotName} query <phrase>
+			
+		*insult me:*
+			${robotName} insult me
         `)
 	})
 }
