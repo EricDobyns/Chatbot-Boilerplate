@@ -15,8 +15,10 @@ describe("help.js", () => {
 		room.destroy()
 	})
 
-	it("Robot Help", async () => {
-		await room.user.say("TestUser", "@hubot help")
-		expect(room.messages.length).to.equal(2)
+	context("Robot Help", function() {
+		it("Received Response", async () => {
+			await room.user.say("TestUser", "@hubot help")
+			expect(room.messages.length).to.equal(2)
+		})
 	})
 })

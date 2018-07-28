@@ -1,6 +1,5 @@
 --require babel-polyfill
 --require babel-core/register 
 --recursive ./tests/mocha/unit/**/*.test.js
---time 200
 -R spec
 --exit
